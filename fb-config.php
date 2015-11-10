@@ -5,4 +5,5 @@ $config = [
 	'app_secret' => '',
 	'default_graph_version' => 'v2.5',  
 ];
+?>
 
