@@ -14,10 +14,10 @@
 if(isset($_POST["message"]) && !empty($_POST["message"]) && isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"])) {
 
 
-	$servername = "localhost";
-	$username = "ntuhgsco_kobe";
-	$password = "a1s2d3f4";
-	$dbname = "ntuhgsco_nthukobe";
+	$servername = "";
+	$username = "";
+	$password = "";
+	$dbname = "";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -41,7 +41,7 @@ if(isset($_POST["message"]) && !empty($_POST["message"]) && isset($_POST["g-reca
 	curl_setopt($ch, CURLOPT_POST, true); // start POST
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query( array(
-		"secret" => "6LfwqhATAAAAAJoTErB6Rew8wrY0bTRKo1CWskTb", 
+		"secret" => "", 
 		"response" => $_POST['g-recaptcha-response'])));
 	$result_recaptcha = curl_exec($ch);
 	$result_json = json_decode($result_recaptcha, true);
